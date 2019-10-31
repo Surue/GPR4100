@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour {
     private float speed = 4;
 
     PlayerHealth playerHealth;
+
+    [SerializeField] bool isTop = false;
+
+    bool canJump = true;
     
     // Start is called before the first frame update
     void Start() {
@@ -27,15 +31,27 @@ public class PlayerController : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        body.velocity = direction * speed;
+        body.velocity = direction;
     }
     
     // Update is called once per frame
     void Update() {
-        direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if (isTop) {
+            direction = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
 
-        if (Input.GetAxis("Fire1") > 0.1f) {
-            playerHealth.AttackSelf(10);
+            if (Input.GetAxis("Jump") > 0.1f && canJump) {
+                Debug.Log("ici");
+                direction.y += 10;
+
+                canJump = false;
+            }
+            
+        } else {
+            direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed;
         }
+    }
+
+    void OnTriggerStay2D(Collider2D other) {
+        canJump = true;
     }
 }
