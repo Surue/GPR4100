@@ -15,13 +15,17 @@ public class PlayerHealth : MonoBehaviour {
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+    public void AttackSelf(int dmg) {
+        currentHealth -= dmg;
+        
+        Debug.Log("Current health = " + currentHealth);
+        
+        if (currentHealth <= 0) {
+            Destroy(gameObject);
+        }
     }
 
-    public void AttackSelf(int dmg) {
+    public void TakeDamage(int dmg) {
         currentHealth -= dmg;
         
         Debug.Log("Current health = " + currentHealth);
