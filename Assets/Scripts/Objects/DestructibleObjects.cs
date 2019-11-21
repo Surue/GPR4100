@@ -8,6 +8,13 @@ using UnityEngine;
 public class DestructibleObjects : MonoBehaviour {
     [SerializeField] int health = 5;
 
+    int test = 10;
+
+    public int Test {
+        get => test;
+        set => test = value;
+    }
+
     void OnCollisionEnter2D(Collision2D other) {
 
         if (other.gameObject.GetComponent<Bullet>() != null) {

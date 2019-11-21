@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
     private Rigidbody2D body;
@@ -29,12 +32,22 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] GameObject prefabBullet;
     [SerializeField] Transform bulletSpawnPoint;
 
+    [Header("Animation")] 
+    Animator animator_;
+
+    SpriteRenderer spriteRenderer_;
+    bool isLookingRight = true;
+    
     [SerializeField] int money;
+    [SerializeField] TextMeshProUGUI textMoney;
+    
+    
     
     // Start is called before the first frame update
     void Start() {
         body = GetComponent<Rigidbody2D>();
-
+        spriteRenderer_ = GetComponentInChildren<SpriteRenderer>();
+        
         if (body != null) {
             Debug.Log("Body founded!");
         } else {
@@ -42,6 +55,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         playerHealth = GetComponent<PlayerHealth>();
+        animator_ = GetComponentInChildren<Animator>();
     }
 
     void FixedUpdate() {
@@ -55,6 +69,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update() {
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            playerHealth.AttackSelf(1);
+        }
+        
         direction = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
 
         CheckJump();
@@ -65,6 +83,22 @@ public class PlayerController : MonoBehaviour {
             
             bullet.GetComponent<Rigidbody2D>().velocity = Vector2.right * 10; 
         }
+        
+        animator_.SetFloat("speed", Mathf.Abs(body.velocity.x));
+
+        if (body.velocity.x < 0.1f && isLookingRight) {
+            spriteRenderer_.flipX = true;
+            isLookingRight = false;
+        } else if (body.velocity.x > 0.1f && !isLookingRight) {
+            spriteRenderer_.flipX = false;
+            isLookingRight = true;
+        }
+
+        if (Mathf.Abs(body.velocity.y) > 0.1f) {
+            animator_.SetBool("isFalling", true);
+        } else {
+            animator_.SetBool("isFalling", false);
+        }
     }
     
     void CheckJump() {
@@ -72,6 +106,8 @@ public class PlayerController : MonoBehaviour {
         
         if (Input.GetAxis("Jump") > 0.1f && canJump) {
             Debug.Log("Jump");
+            animator_.SetTrigger("jump");
+            
             direction.y += jumpVelocity;
 
             canJump = false;
@@ -93,6 +129,8 @@ public class PlayerController : MonoBehaviour {
 
     public void AddMoney(int value) {
         money += value;
+
+        textMoney.text = money.ToString();
     }
 
     public void TakeDamage(int value) {
