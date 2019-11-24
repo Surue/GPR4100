@@ -7,11 +7,13 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
+    [Header("Health")]
     [SerializeField]
     float maxHealth;
     
     float currentHealth;
 
+    [Header("Animation")]
     [SerializeField] Image lifeBarImage;
 
     [SerializeField] Color fullLife;
@@ -24,37 +26,26 @@ public class PlayerHealth : MonoBehaviour {
     
     // Start is called before the first frame update
     void Start() {
+        //Set the current health to the max health
         currentHealth = maxHealth;
     }
 
     void Update() {
+        //Update timer
         timerBeforeLifeUp += Time.deltaTime;
 
-        if (timerBeforeLifeUp >= timeBeforeLifeUp) {
-            if (currentHealth < maxHealth) {
-                currentHealth += 0.2f;
-                UpdateUiLifeBar();
-            }
-        }
+        //Check if can gain life 
+        if (!(timerBeforeLifeUp >= timeBeforeLifeUp)) return;
+        if (!(currentHealth < maxHealth)) return;
+        
+        //Update life
+        currentHealth += 0.2f;
+        UpdateUiLifeBar();
     }
 
     void UpdateUiLifeBar() {
         lifeBarImage.fillAmount = currentHealth / maxHealth;
         lifeBarImage.color = Color.Lerp(lowLife, fullLife, currentHealth / maxHealth);
-    }
-
-    public void AttackSelf(int dmg) {
-        currentHealth -= dmg;
-        
-        if (currentHealth <= 0) {
-            Destroy(gameObject);
-        }
-        
-        UpdateUiLifeBar();
-        timerBeforeLifeUp = 0;
-
-        Instantiate(prefabUiLoseLife, transform.position, Quaternion.identity);
-        
     }
 
     public void TakeDamage(int dmg) {
@@ -69,6 +60,11 @@ public class PlayerHealth : MonoBehaviour {
         UpdateUiLifeBar();
         timerBeforeLifeUp = 0;
         
+        //Instantiate splash text when loosing life
         Instantiate(prefabUiLoseLife, transform.position, Quaternion.identity);
+    }
+
+    void ReduceLife() {
+        
     }
 }
