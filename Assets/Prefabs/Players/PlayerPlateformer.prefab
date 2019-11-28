@@ -27,7 +27,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.546, y: 0.031, z: 0}
   m_LocalScale: {x: 1.05, y: 0.22, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1667229057}
   m_Father: {fileID: 8103299642022647400}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -102,12 +103,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667229056}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.06, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.48952374, y: -0.14090909, z: 0}
+  m_LocalScale: {x: 0.95238096, y: 4.5454545, z: 1}
   m_Children: []
-  m_Father: {fileID: 8103299642022647400}
-  m_RootOrder: 2
+  m_Father: {fileID: 1166695567}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8103299640904728664
 GameObject:
@@ -221,7 +222,6 @@ Transform:
   m_Children:
   - {fileID: 8103299640904728665}
   - {fileID: 1166695567}
-  - {fileID: 1667229057}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -284,15 +284,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbb77bf6fd954d48b5c2789759e604b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  maxSpeed: 10
   jumpVelocity: 10
   raycastJumpLength: 1
   timeStopJump: 0.1
   jumpFallingModifier: 1.2
+  speed: 5
+  maxSpeed: 10
   prefabBullet: {fileID: 6676688702106794011, guid: cf6747ed802e1c147bfc145b569c52bf,
     type: 3}
   bulletSpawnPoint: {fileID: 1667229057}
+  bulletSpeed: 10
+  money: 0
+  textMoney: {fileID: 0}
 --- !u!114 &6239673883454645996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,3 +309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
+  lifeBarImage: {fileID: 0}
+  fullLife: {r: 0, g: 0, b: 0, a: 0}
+  lowLife: {r: 0, g: 0, b: 0, a: 0}
+  timeBeforeLifeUp: 3
+  prefabUiLoseLife: {fileID: 0}

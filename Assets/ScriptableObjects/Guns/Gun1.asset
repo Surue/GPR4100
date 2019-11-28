@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb5e61419a03404eaac4eb2676869d3, type: 3}
+  m_Name: Gun1
+  m_EditorClassIdentifier: 
+  prefabBullet: {fileID: 6676688702106794011, guid: 3ab3c1d43565ca74380a8c00a70c9ff8,
+    type: 3}
+  bulletSpeed: 20
+  delay: 0.05
+  sprite: {fileID: 7593752084218216659, guid: ba318947e9b722f4087eab0821459bbd, type: 3}
+  dispertion: 20
+  numb: 1

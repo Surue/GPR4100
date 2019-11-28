@@ -1,0 +1,568 @@
+fileFormatVersion: 2
+guid: ba318947e9b722f4087eab0821459bbd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6624985510143109095
+    second: firearm_0
+  - first:
+      213: 7593752084218216659
+    second: firearm_1
+  - first:
+      213: -3375465486634067821
+    second: firearm_2
+  - first:
+      213: 2728470099925370856
+    second: firearm_3
+  - first:
+      213: 2640316540707994035
+    second: firearm_4
+  - first:
+      213: 567120258365540281
+    second: firearm_5
+  - first:
+      213: 2376892611995152245
+    second: firearm_6
+  - first:
+      213: 7918464760056883203
+    second: firearm_7
+  - first:
+      213: -5024266009604421705
+    second: firearm_8
+  - first:
+      213: -737404599215296289
+    second: firearm_9
+  - first:
+      213: 5003691031675492660
+    second: firearm_10
+  - first:
+      213: 8050784896471219025
+    second: firearm_11
+  - first:
+      213: 1439343351922442858
+    second: firearm_12
+  - first:
+      213: 2480747318731611074
+    second: firearm_13
+  - first:
+      213: 6550152362266534410
+    second: firearm_14
+  - first:
+      213: -6989810997096893025
+    second: firearm_15
+  - first:
+      213: 421269559887033797
+    second: firearm_16
+  - first:
+      213: -4675027592243264647
+    second: firearm_17
+  - first:
+      213: -7723084634472949693
+    second: firearm_18
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: firearm_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 434.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94761fc3c8589794d91b5f1fa3e46cdf
+      internalID: 6624985510143109095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_1
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 434.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96fbac4676acba9469fbcfb979098d2b
+      internalID: 7593752084218216659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 434.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0840bd5614fa28a4b935caa3424b1c09
+      internalID: -3375465486634067821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_3
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 434.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0e3cc7ed761eb44986d510d5e7e005
+      internalID: 2728470099925370856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_4
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 434.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b153be081dded4f931b35bea40031f
+      internalID: 2640316540707994035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7ec3ae7639b974688fdfe29499b69d
+      internalID: 567120258365540281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_6
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 290.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47819e78272a3c4cb54b7c686e813af
+      internalID: 2376892611995152245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_7
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 290.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b26fce83d9a934da7f7669af228766
+      internalID: 7918464760056883203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_8
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 290.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0910d675ad07b7643a9a391e29fcb2c4
+      internalID: -5024266009604421705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_9
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 290.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0743e485d276645baab84167ba6a93
+      internalID: -737404599215296289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e934f6aa036894c9cbacf8bb813a62
+      internalID: 5003691031675492660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_11
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 146.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7873d8ba8eb44479f50232935701be
+      internalID: 8050784896471219025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_12
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 146.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724329e54197e4a4ba2261494eb67f20
+      internalID: 1439343351922442858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_13
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 146.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4d01ac3a5562c45950a11402f7d075
+      internalID: 2480747318731611074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_14
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 146.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03dd2c3791afc44b91ced03fd23c826
+      internalID: 6550152362266534410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c40515772a8724ea6ec58b84c6a3ef
+      internalID: -6989810997096893025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_16
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8516a11eb60c70478590ae61a1aa345
+      internalID: 421269559887033797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_17
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 2.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0321cf29784e8c24e8feefdf2af0054f
+      internalID: -4675027592243264647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firearm_18
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 2.25
+        width: 145.6
+        height: 144.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555ca20fcb34c1545b51a795a11bc91e
+      internalID: -7723084634472949693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9972563bed057b74f91f6327efc2d580
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

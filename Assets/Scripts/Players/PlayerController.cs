@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Animations;
@@ -28,14 +27,14 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     float maxSpeed = 10;
 
+    [Header("sounds")]
+    [SerializeField] List<SO_Clip> jumpClips_;
+    
+    //Gun
+    GunController gunController_;
+    
     //Health
     PlayerHealth playerHealth;
-
-    //Gun
-    [Header("Gun")] 
-    [SerializeField] GameObject prefabBullet;
-    [SerializeField] Transform bulletSpawnPoint;
-    [SerializeField] float bulletSpeed = 10;
 
     //Animation
     [Header("Animation")] 
@@ -47,12 +46,21 @@ public class PlayerController : MonoBehaviour {
     //Inventory
     [SerializeField] int money;
     [SerializeField] TextMeshProUGUI textMoney;
+
+    AudioManager audioManager_;
     
     void Start() {
         body = GetComponent<Rigidbody2D>();
         spriteRenderer_ = GetComponentInChildren<SpriteRenderer>();
         playerHealth = GetComponent<PlayerHealth>();
         animator_ = GetComponentInChildren<Animator>();
+        gunController_ = GetComponentInChildren<GunController>();
+
+        
+        
+        audioManager_ = FindObjectOfType<AudioManager>();
+        
+        gunController_.SetAudioManager(audioManager_);
     }
 
     void FixedUpdate() {
@@ -70,14 +78,12 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         //Function to attack itself
         if (Input.GetKeyDown(KeyCode.Q)) {
+            audioManager_.OnVolumDown();
             playerHealth.TakeDamage(1);
         }
         
         //Movement
         UpdateMovement();
-        
-        //Gun
-        UpdateGun();
 
         //Animation
         UpdateAnimation();
@@ -104,15 +110,6 @@ public class PlayerController : MonoBehaviour {
 
         animator_.SetBool("isFalling", Mathf.Abs(body.velocity.y) > 0.1f);
     }
-
-    void UpdateGun() {
-        if (!(Input.GetAxis("Fire1") > 0.1f)) return;
-        
-        GameObject bullet = Instantiate(prefabBullet, bulletSpawnPoint);
-        bullet.transform.parent = null;
-            
-        bullet.GetComponent<Rigidbody2D>().velocity = Vector2.right * bulletSpeed;
-    }
     
     void CheckJump() {
         //Reduce timer
@@ -130,6 +127,8 @@ public class PlayerController : MonoBehaviour {
         //Check if the input is pressed
         if (!(Input.GetAxis("Jump") > 0.1f) || !canJump) return;
         
+        
+        audioManager_.PlayWithRandomPitch(jumpClips_[Random.Range(0, jumpClips_.Count)]);
         animator_.SetTrigger("jump");
         direction.y += jumpVelocity;
         canJump = false;
@@ -148,13 +147,14 @@ public class PlayerController : MonoBehaviour {
         playerHealth.TakeDamage(value);
     }
 
+    public GunController GetGun() {
+        return gunController_;
+    }
+
     void OnDrawGizmos() {
         Gizmos.color = Color.blue;
         Gizmos.DrawLine((Vector2)transform.position, (Vector2)transform.position + Vector2.down * raycastJumpLength);
         
         Gizmos.DrawWireCube((Vector2) transform.position + Vector2.down * 0.5f, new Vector2(1f, 0.2f));
-        
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(bulletSpawnPoint.position, 0.3f);
     }
 }
